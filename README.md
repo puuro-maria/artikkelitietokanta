@@ -4,4 +4,5 @@ Kokoaa tieteellisiä artikkeleita ja kirjoja aihealueittain ja kirjoittajittain.
 Käyttäjä pystyy lisäämään teosten nimiä ja niihin liittyviä avainsanoja.
 Hakuja voi tehdä avainsanoilla, vuosiluvuilla ja artikkelien tai kirjoittajien nimillä.
 Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Google Scholar, EBSCO, HY:n kirjasto jne). 
-[Tietokantakaavio - ensimmäinen luonnos](https://drive.google.com/file/d/1EMGizl9UYOBCRZpyQcR8i9A4Og33X0ZT/view?usp=sharing)
+
+[Tietokantakaavio - ensimmäinen luonnos](https://github.com/puuro-maria/artikkelitietokanta/blob/master/Tietokantakaavio.JPG)
