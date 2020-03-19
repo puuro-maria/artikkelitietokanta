@@ -2,10 +2,15 @@
 
 {% block body %}
 <form method="POST" action="{{ url_for('artikkelit_create') }}">
+  Article title:
   <input type="text" name="name"/><br/>
-  <input type="text" name="publisher"/><br/>
-  <input type="text" name="source"/><br/>
+  Tähän tulee artikkelin kirjoittajat<br/>
+  Year published:
   <input type="text" name="year"/><br/>
+  Publisher:
+  <input type="text" name="publisher"/><br/>
+  Source:
+  <input type="text" name="source"/><br/>
   <input type="submit" value="Add article"><br/>
 </form>
 {% endblock %}
