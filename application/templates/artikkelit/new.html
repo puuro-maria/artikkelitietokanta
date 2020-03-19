@@ -2,7 +2,10 @@
 
 {% block body %}
 <form method="POST" action="{{ url_for('artikkelit_create') }}">
-  <input type="text" name="name"/>
+  <input type="text" name="name"/><br/>
+  <input type="text" name="publisher"/><br/>
+  <input type="text" name="source"/><br/>
+  <input type="text" name="year"/><br/>
   <input type="submit" value="Add article"><br/>
 </form>
 {% endblock %}

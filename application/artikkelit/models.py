@@ -12,7 +12,7 @@ class Artikkeli(db.Model):
     year = db.Column(db.Integer, nullable=False)
 
 
-    def __init__(self, name, publisher="kustantaja", source="HY:n kirjasto", year=2020):
+    def __init__(self, name, publisher, source, year):
         self.name = name
         self.publisher = publisher
         self.source = source
