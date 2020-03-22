@@ -7,5 +7,5 @@ Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Goog
 
 [Tietokantakaavio - ensimmäinen luonnos](https://github.com/puuro-maria/artikkelitietokanta/blob/master/Tietokantakaavio_artikkelitietokanta.JPG)
 
-[Sovellus Herokussa](https://git.heroku.com/artikkelitietokanta.git)
+[Sovellus Herokussa](https://artikkelitietokanta.herokuapp.com/)
 
