@@ -6,3 +6,5 @@ Hakuja voi tehdä avainsanoilla, vuosiluvuilla ja artikkelien tai kirjoittajien 
 Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Google Scholar, EBSCO, HY:n kirjasto jne). 
 
 [Tietokantakaavio - ensimmäinen luonnos](https://github.com/puuro-maria/artikkelitietokanta/blob/master/Tietokantakaavio_artikkelitietokanta.JPG)
+[Sovellus Herokussa](https://git.heroku.com/artikkelitietokanta.git)
+
