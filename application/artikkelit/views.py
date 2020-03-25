@@ -23,7 +23,13 @@ def artikkelit_form():
 
 @app.route("/artikkelit/", methods=["POST"])
 def artikkelit_create():
-    a = Artikkeli(request.form.get("name"), request.form.get("publisher"), request.form.get("source"), request.form.get("year"))
+
+    form = ArtikkeliForm(request.form)
+
+    if not form.validate():
+        return render_template("artikkelit/new.html", form = form)
+
+    a = Artikkeli(form.name.data, form.publisher.data, form.source.data, form.year.data)
 
     db.session().add(a)
     db.session().commit()
