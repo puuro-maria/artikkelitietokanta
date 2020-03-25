@@ -2,7 +2,7 @@
 
 - Käyttäjä voi luoda tunnuksen
 
-    - Uniikki nimimerkki ja käyttäjän valitsema salasana
+    - Valitaan uniikki nimimerkki ja käyttäjän valitsema salasana
 
 - Käyttäjä voi kirjautua sisään järjestelmään
 
