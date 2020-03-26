@@ -15,15 +15,26 @@ def artikkelit_index():
 def artikkelit_form():
     return render_template("artikkelit/new.html", form = ArtikkeliForm())
 
-#artikkelin lähteen muuttaminen:
-#@app.route("/artikkelit/<artikkeli_id>/", methods=["POST"])
-#def artikkeli_change_source(artikkeli_id):
 
- #   a = Artikkeli.query.get(artikkeli_id)
-  #  a.source = (request.form.get(""))
-   # db.session().commit()
+@app.route("/artikkelit/<artikkeli_id>/", methods=["POST"])
+@login_required
+def artikkeli_change_source(artikkeli_id):
+
+    a = Artikkeli.query.get(artikkeli_id)
+    a.source = (request.form.get("source"))
+    db.session().commit()
   
-    #return redirect(url_for("artikkelit_index"))
+    return redirect(url_for("artikkelit_index"))
+
+@app.route("/artikkelit/delete/<artikkeli_id>/", methods=["POST"])
+@login_required
+def artikkeli_delete(artikkeli_id):
+    
+    a = Artikkeli.query.get(artikkeli_id)
+    db.session().delete(a)
+    db.session().commit()
+
+    return redirect(url_for("artikkelit_index"))
 
 @app.route("/artikkelit/", methods=["POST"])
 @login_required
@@ -41,3 +52,4 @@ def artikkelit_create():
     db.session().commit()
 
     return redirect(url_for("artikkelit_index"))
+
