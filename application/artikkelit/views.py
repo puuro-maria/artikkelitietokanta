@@ -1,13 +1,17 @@
 from application import app, db
 from flask import redirect, render_template, request, url_for
+from flask_login import login_required
+
 from application.artikkelit.models import Artikkeli
 from application.artikkelit.forms import ArtikkeliForm
 
 @app.route("/artikkelit", methods=["GET"])
+@login_required
 def artikkelit_index():
     return render_template("artikkelit/list.html", artikkelit = Artikkeli.query.all())
 
 @app.route("/artikkelit/new/")
+@login_required
 def artikkelit_form():
     return render_template("artikkelit/new.html", form = ArtikkeliForm())
 
@@ -22,6 +26,7 @@ def artikkelit_form():
     #return redirect(url_for("artikkelit_index"))
 
 @app.route("/artikkelit/", methods=["POST"])
+@login_required
 def artikkelit_create():
 
     form = ArtikkeliForm(request.form)
