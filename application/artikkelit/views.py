@@ -36,6 +36,8 @@ def artikkelit_create():
 
     a = Artikkeli(form.name.data, form.publisher.data, form.source.data, form.year.data)
 
+    
+
     db.session().add(a)
     db.session().commit()
 
