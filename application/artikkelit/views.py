@@ -8,7 +8,7 @@ from application.artikkelit.forms import ArtikkeliForm
 @app.route("/artikkelit", methods=["GET"])
 @login_required
 def artikkelit_index():
-    return render_template("artikkelit/list.html", artikkelit = Artikkeli.query.all())
+    return render_template("artikkelit/list.html", artikkelit = Artikkeli.query.filter_by(account_id = current_user.id))
 
 @app.route("/artikkelit/new/")
 @login_required
@@ -42,8 +42,8 @@ def artikkelit_create():
 
     form = ArtikkeliForm(request.form)
 
-    #if not form.validate():
-     #   return render_template("artikkelit/new.html", form = form)
+    if not form.validate():
+        return render_template("artikkelit/new.html", form = form)
 
     a = Artikkeli(form.name.data, form.publisher.data, form.source.data, form.year.data)
     a.account_id = current_user.id
