@@ -1,6 +1,6 @@
 from application import app, db
 from flask import redirect, render_template, request, url_for
-from flask_login import login_required
+from flask_login import login_required, current_user
 
 from application.artikkelit.models import Artikkeli
 from application.artikkelit.forms import ArtikkeliForm
@@ -36,7 +36,7 @@ def artikkelit_create():
 
     a = Artikkeli(form.name.data, form.publisher.data, form.source.data, form.year.data)
 
-    
+    a.account_id = current_user.id
 
     db.session().add(a)
     db.session().commit()
