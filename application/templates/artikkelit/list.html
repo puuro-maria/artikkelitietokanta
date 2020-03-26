@@ -14,6 +14,15 @@
        <td>{{artikkeli.publisher}}</td>
        <td>{{artikkeli.source}}</td>
        <td>{{artikkeli.year}}</td>
+       <td>
+        <form method="POST" action="{{ url_for('artikkeli_change_source', artikkeli_id=artikkeli.id) }}">
+          <input type="text" name="source"/>
+          <input type="submit" value="Change source"/>
+        </form>
+        <form method="POST" action="{{ url_for('artikkeli_delete', artikkeli_id=artikkeli.id) }}">
+          <input type="submit" value="Delete this article"/>
+        </form>
+            </td>
     </tr>
   {% endfor %}
  </table>
