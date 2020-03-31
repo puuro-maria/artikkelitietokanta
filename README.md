@@ -1,5 +1,7 @@
-# artikkelitietokanta
-Pieni artikkeli-/teostietokanta tukemaan tutkielmien (esim. kandi, gradu) tekemistä.
+# Artikkelitietokanta
+Pieni artikkeli-/teostietokanta tukemaan tutkielmien (esim. kandi, gradu) tekemistä ja lukulistaa.
+
+
 Kokoaa tieteellisiä artikkeleita ja kirjoja aihealueittain ja kirjoittajittain.
 Käyttäjä pystyy lisäämään teosten nimiä ja niihin liittyviä avainsanoja.
 Hakuja voi tehdä avainsanoilla, vuosiluvuilla ja artikkelien tai kirjoittajien nimillä.
@@ -8,4 +10,11 @@ Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Goog
 [Tietokantakaavio - ensimmäinen luonnos](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/Tietokantakaavio_artikkelitietokanta.JPG)
 
 [Sovellus Herokussa](https://artikkelitietokanta.herokuapp.com/)
+
+- Testikäyttäjän tunnukset:
+
+    - käyttäjätunnus: testi
+ 
+    - salasana: testi
+
 
