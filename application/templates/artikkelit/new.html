@@ -22,6 +22,21 @@
     </tr>
     <tr>
       <td>
+        {{ form.authors.label }}
+      </td>
+      <td>
+        {{ form.authors }}
+      </td>
+      <td>
+        <ul>
+          {% for error in form.authors.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>
         {{ form.publisher.label }}
       </td>
       <td>

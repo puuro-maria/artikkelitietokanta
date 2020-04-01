@@ -16,9 +16,14 @@ else:
 db = SQLAlchemy(app)
 
 from application import views
+from application import models
 
 from application.artikkelit import models
 from application.artikkelit import views
+
+from application.author import models
+
+from application.articleauthor import models
 
 from application.auth import models 
 from application.auth import views

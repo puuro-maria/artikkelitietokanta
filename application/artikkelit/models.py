@@ -1,10 +1,8 @@
 from application import db
+from sqlalchemy.orm import relationship
+from application.models import Base
 
-class Artikkeli(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    date_created = db.Column(db.DateTime, default=db.func.current_timestamp())
-    date_modified = db.Column(db.DateTime, default=db.func.current_timestamp(),
-    onupdate=db.func.current_timestamp(), autoincrement=True)
+class Artikkeli(Base):
 
     name = db.Column(db.String(144), nullable=False)
     publisher = db.Column(db.String(144), nullable=False)
@@ -13,8 +11,11 @@ class Artikkeli(db.Model):
 
     account_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)
 
-    def __init__(self, name, publisher, source, year):
+    authors = relationship("Author", secondary="articleauthor")
+
+    def __init__(self, name, authors, publisher, source, year):
         self.name = name
+        self.authors = authors
         self.publisher = publisher
         self.source = source
         self.year = year

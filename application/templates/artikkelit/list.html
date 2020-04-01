@@ -11,6 +11,9 @@
   {% for artikkeli in artikkelit %}
     <tr>
        <td>{{artikkeli.name}}</td>
+       {% for author in artikkeli.authors %}
+       <td>{{artikkeli.authors}}</td>
+       {% endfor %}
        <td>{{artikkeli.publisher}}</td>
        <td>{{artikkeli.source}}</td>
        <td>{{artikkeli.year}}</td>
