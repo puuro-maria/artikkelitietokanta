@@ -27,6 +27,15 @@ def artikkeli_change_source(artikkeli_id):
   
     return redirect(url_for("artikkelit_index"))
 
+@app.route("/artikkelit/read/<artikkeli_id>/", methods=["POST"])
+@login_required
+def artikkeli_set_read(artikkeli_id):
+    a = Artikkeli.query.get(artikkeli_id)
+    a.read = True
+    db.session().commit()
+
+    return redirect(url_for("artikkelit_index"))
+
 @app.route("/artikkelit/delete/<artikkeli_id>/", methods=["POST"])
 @login_required
 def artikkeli_delete(artikkeli_id):

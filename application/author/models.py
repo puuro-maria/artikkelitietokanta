@@ -11,5 +11,6 @@ class Author(Base):
     articles = relationship("Artikkeli", secondary="articleauthor")
 
     def __init__(self, name):
-        self.name = name
+            self.name = name
+
 

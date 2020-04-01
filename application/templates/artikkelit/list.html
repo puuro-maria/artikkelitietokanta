@@ -16,6 +16,12 @@
        <td>{{artikkeli.publisher}}</td>
        <td>{{artikkeli.source}}</td>
        <td>{{artikkeli.year}}</td>
+       <td>{{artikkeli.read}}
+         <td><form method="POST" action="{{url_for('artikkeli_set_read', artikkeli_id = artikkeli.id)}}">
+           <input type="submit" value="Mark as read/">
+         </form>
+        </td>
+       </td>
        <td>
         <form method="POST" action="{{ url_for('artikkeli_change_source', artikkeli_id=artikkeli.id) }}">
           <input type="text" name="source"/>
