@@ -46,7 +46,7 @@ def artikkelit_create():
     if not form.validate():
         return render_template("artikkelit/new.html", form = form)
 
-    au = Author(form.name.data)
+    au = Author(form.authors.data)
     a = Artikkeli(form.name.data, [au], form.publisher.data, form.source.data, form.year.data)
     a.account_id = current_user.id
 

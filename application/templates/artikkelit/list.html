@@ -4,6 +4,7 @@
   <table>
     <tr>
       <th>Title</th>
+      <th>Authors</th>
       <th>Publisher</th>
       <th>Source</th>
       <th>Year published</th>
@@ -11,9 +12,7 @@
   {% for artikkeli in artikkelit %}
     <tr>
        <td>{{artikkeli.name}}</td>
-       {% for author in artikkeli.authors %}
        <td>{{artikkeli.authors}}</td>
-       {% endfor %}
        <td>{{artikkeli.publisher}}</td>
        <td>{{artikkeli.source}}</td>
        <td>{{artikkeli.year}}</td>
