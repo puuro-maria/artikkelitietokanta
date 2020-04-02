@@ -9,6 +9,8 @@ Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Goog
 
 [Tietokantakaavio - ensimmäinen luonnos](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/Tietokantakaavio_artikkelitietokanta.JPG)
 
+[Käyttötapaukset](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kayttotapaukset.md)
+
 [Sovellus Herokussa](https://artikkelitietokanta.herokuapp.com/)
 
 - Testikäyttäjän tunnukset:
