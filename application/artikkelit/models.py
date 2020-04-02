@@ -26,7 +26,7 @@ class Artikkeli(Base):
     @staticmethod
     def list_unread_articles(account_id):
         
-        stmt = text("SELECT id, name, read, account_id FROM artikkeli WHERE (read = 0 OR read IS NULL) AND (account_id = :account_id)").params(account_id = account_id)
+        stmt = text("SELECT id, name, read, account_id FROM artikkeli WHERE (read = '0' OR read IS NULL) AND (account_id = :account_id)").params(account_id = account_id)
         res = db.engine.execute(stmt)
 
         response = []
