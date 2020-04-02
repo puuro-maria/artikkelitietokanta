@@ -35,3 +35,24 @@ class Artikkeli(Base):
             response.append({"id":row[0], "name": row[1], "read":row[2], "account_id": row[3]})
 
         return response
+
+    @staticmethod
+    def article_summary(account_id):
+
+        stmt = text("SELECT  author.name, COUNT(artikkeli.id) AS 'count'"
+        " FROM author INNER JOIN articleauthor ON author.id = articleauthor.author_id"
+        " INNER JOIN artikkeli ON artikkeli.id = articleauthor.article_id"
+        " INNER JOIN account ON account.id = artikkeli.account_id"
+        " WHERE (artikkeli.account_id = :account_id)"
+        " GROUP BY author.name").params(account_id = account_id)
+
+        res = db.engine.execute(stmt)
+
+        response = []
+
+        for row in res:
+            response.append({"author.name":row[0], "count":row[1]})
+
+        return response
+
+

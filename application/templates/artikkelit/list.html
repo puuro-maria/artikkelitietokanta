@@ -53,4 +53,19 @@
     </tr>
    {% endfor %}
  </table>
+
+ <table class="table">
+  <thead class="thead-dark">
+   <tr>
+     <th scope="col">Author</th>
+     <th chope="col">Number of articles</th>
+    </tr>
+    </thead>
+   {% for author in summary %}
+   <tr>
+     <td>{{ author.name}}</td>
+     <td>{{ count }}</td>
+    </tr>
+   {% endfor %}
+ </table>
 {% endblock %}

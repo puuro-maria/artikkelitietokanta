@@ -4,10 +4,9 @@
 
 
 <form method="POST" action="{{ url_for('artikkelit_create') }}">
-  <table>
-    <tr>
-      <td>
-        {{ form.name.label }}
+  <div class="form-group">
+    <td>
+    {{ form.name.label }}
       </td>
       <td>
         {{ form.name }}
