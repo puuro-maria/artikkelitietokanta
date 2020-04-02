@@ -3,7 +3,7 @@ Pieni artikkeli-/teostietokanta tukemaan tutkielmien (esim. kandi, gradu) tekemi
 
 
 Kokoaa tieteellisiä artikkeleita ja kirjoja aihealueittain ja kirjoittajittain.
-Käyttäjä pystyy lisäämään teosten nimiä ja niihin liittyviä avainsanoja.
+Käyttäjä pystyy lisäämään teosten nimiä ja niihin liittyviä avainsanoja. Käyttäjä voi pitää kirjaa siitä, mitkä teokset on luettu ja mitkä vielä lukulistalla.
 Hakuja voi tehdä avainsanoilla, vuosiluvuilla ja artikkelien tai kirjoittajien nimillä.
 Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Google Scholar, EBSCO, HY:n kirjasto jne). 
 

@@ -10,6 +10,8 @@
 
 - Käyttäjä voi jälkikäteen muuttaa teoksen sijaintia (jos esim. linkki pdf-tiedostoon muuttuu)
 
+- Käyttäjä voi merkata teoksen luetuksi
+
 - Käyttäjä voi hakea artikkeleita:
 
     - avainsanalla
