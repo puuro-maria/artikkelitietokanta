@@ -51,7 +51,7 @@ class Artikkeli(Base):
         response = []
 
         for row in res:
-            response.append({"author.name":row[0], "count":row[1]})
+            response.append({"author":row[0], "count":row[1]})
 
         return response
 
