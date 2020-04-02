@@ -1,5 +1,6 @@
 from application import db
 from sqlalchemy.orm import relationship
+from sqlalchemy.sql import text
 from application.models import Base
 
 class Artikkeli(Base):
@@ -23,13 +24,14 @@ class Artikkeli(Base):
         self.read = read
 
     @staticmethod
-    def list_unread_articles(account_id):
-  
-        res = db.engine.execute("SELECT id, name, read FROM artikkeli WHERE read = 0 OR read IS NULL AND account_id = ?", account_id)
+    def list_unread_articles(account_id=1):
+        
+        stmt = text("SELECT id, name, read, account_id FROM artikkeli WHERE (read = 0 OR read IS NULL) AND (account_id = :account_id)").params(account_id = account_id)
+        res = db.engine.execute(stmt)
 
         response = []
 
         for row in res:
-            response.append({"id":row[0], "name": row[1], "read":row[2]})
+            response.append({"id":row[0], "name": row[1], "read":row[2], "account_id": row[3]})
 
         return response
