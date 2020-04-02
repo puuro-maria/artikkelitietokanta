@@ -9,7 +9,7 @@
       <th>Source</th>
       <th>Year published</th>
     </tr>
-  {% for artikkeli in artikkelit %}
+  {% for artikkeli in articles %}
     <tr>
        <td>{{artikkeli.name}}</td>
        <td>{{artikkeli.authors}}</td>
@@ -27,11 +27,24 @@
           <input type="text" name="source"/>
           <input type="submit" value="Change source"/>
         </form>
+      </td>
+      <td>
         <form method="POST" action="{{ url_for('artikkeli_delete', artikkeli_id=artikkeli.id) }}">
           <input type="submit" value="Delete this article"/>
         </form>
             </td>
     </tr>
   {% endfor %}
+ </table>
+
+ <table>
+   <tr>
+     <th>Unread articles</th>
+    </tr>
+   {% for artikkeli in unread_articles %}
+   <tr>
+     <td>{{artikkeli.name}}</td>
+    </tr>
+   {% endfor %}
  </table>
 {% endblock %}

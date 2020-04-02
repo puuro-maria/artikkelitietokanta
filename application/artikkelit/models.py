@@ -21,3 +21,15 @@ class Artikkeli(Base):
         self.source = source
         self.year = year
         self.read = read
+
+    @staticmethod
+    def list_unread_articles(account_id):
+  
+        res = db.engine.execute("SELECT id, name, read FROM artikkeli WHERE read = 0 OR read IS NULL AND account_id = ?", account_id)
+
+        response = []
+
+        for row in res:
+            response.append({"id":row[0], "name": row[1], "read":row[2]})
+
+        return response

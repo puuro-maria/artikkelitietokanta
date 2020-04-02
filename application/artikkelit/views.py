@@ -9,7 +9,7 @@ from application.author.models import Author
 @app.route("/artikkelit", methods=["GET"])
 @login_required
 def artikkelit_index():
-    return render_template("artikkelit/list.html", artikkelit = Artikkeli.query.filter_by(account_id = current_user.id))
+    return render_template("artikkelit/list.html", articles = Artikkeli.query.filter_by(account_id = current_user.id), unread_articles=Artikkeli.list_unread_articles(current_user.id))
 
 @app.route("/artikkelit/new/")
 @login_required
@@ -63,4 +63,5 @@ def artikkelit_create():
     db.session().commit()
 
     return redirect(url_for("artikkelit_index"))
+    
 
