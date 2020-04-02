@@ -39,7 +39,7 @@ class Artikkeli(Base):
     @staticmethod
     def article_summary(account_id):
 
-        stmt = text("SELECT  author.name, COUNT(artikkeli.id) AS 'count'"
+        stmt = text("SELECT  author.name, COUNT(artikkeli.id) AS count"
         " FROM author INNER JOIN articleauthor ON author.id = articleauthor.author_id"
         " INNER JOIN artikkeli ON artikkeli.id = articleauthor.article_id"
         " INNER JOIN account ON account.id = artikkeli.account_id"
