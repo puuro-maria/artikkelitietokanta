@@ -1,27 +1,27 @@
 # Käyttötapaukset
 
-- Käyttäjä voi luoda tunnuksen
+- [x] Käyttäjä voi luoda tunnuksen
 
-    - Valitaan uniikki nimimerkki ja käyttäjän valitsema salasana
+    - [x] Valitaan uniikki nimimerkki ja käyttäjän valitsema salasana
 
-- Käyttäjä voi kirjautua sisään järjestelmään
+- [x] Käyttäjä voi kirjautua sisään järjestelmään
 
-- Käyttäjä voi lisätä uuden teoksen tietokantaan
+- [x] Käyttäjä voi lisätä uuden teoksen tietokantaan
 
-- Käyttäjä voi jälkikäteen muuttaa teoksen sijaintia (jos esim. linkki pdf-tiedostoon muuttuu)
+- [x] Käyttäjä voi jälkikäteen muuttaa teoksen sijaintia (jos esim. linkki pdf-tiedostoon muuttuu)
 
-- Käyttäjä voi merkata teoksen luetuksi
+- [x] Käyttäjä voi merkata teoksen luetuksi
 
-- Käyttäjä voi hakea artikkeleita:
+- [ ] Käyttäjä voi hakea artikkeleita:
 
-    - avainsanalla
+    - [ ] avainsanalla
 
-    - artikkelin nimellä
+    - [ ] artikkelin nimellä
 
-    - vuosiluvulla
+    - [ ] vuosiluvulla
 
-    - kirjoittajan nimellä
+    - [ ] kirjoittajan nimellä
 
-- Käyttäjä voi poistaa artikkelin omasta kannastaan halutessaan
+- [x] Käyttäjä voi poistaa artikkelin omasta kannastaan halutessaan
 
-- Käyttäjä voi kirjautua ulos
+- [x] Käyttäjä voi kirjautua ulos
