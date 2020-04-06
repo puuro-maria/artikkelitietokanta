@@ -23,8 +23,8 @@ def artikkelit_form():
 @login_required
 def artikkeli_change_source(artikkeli_id):
 
-    a = Artikkeli.query.get(artikkeli_id)
-    a.source = (request.form.get("source"))
+    article = Artikkeli.query.get(artikkeli_id)
+    article.source = (request.form.get("source"))
     db.session().commit()
   
     return redirect(url_for("artikkelit_index"))
@@ -32,8 +32,8 @@ def artikkeli_change_source(artikkeli_id):
 @app.route("/artikkelit/read/<artikkeli_id>/", methods=["POST"])
 @login_required
 def artikkeli_set_read(artikkeli_id):
-    a = Artikkeli.query.get(artikkeli_id)
-    a.read = True
+    article = Artikkeli.query.get(artikkeli_id)
+    article.read = True
     db.session().commit()
 
     return redirect(url_for("artikkelit_index"))
@@ -42,8 +42,8 @@ def artikkeli_set_read(artikkeli_id):
 @login_required
 def artikkeli_delete(artikkeli_id):
     
-    a = Artikkeli.query.get(artikkeli_id)
-    db.session().delete(a)
+    article = Artikkeli.query.get(artikkeli_id)
+    db.session().delete(article)
     db.session().commit()
 
     return redirect(url_for("artikkelit_index"))
@@ -57,11 +57,11 @@ def artikkelit_create():
     if not form.validate():
         return render_template("artikkelit/new.html", form = form)
 
-    au = Author(form.authors.data)
-    a = Artikkeli(form.name.data, [au], form.publisher.data, form.source.data, form.year.data)
-    a.account_id = current_user.id
+    author = Author(form.authors.data)
+    article = Artikkeli(form.name.data, [author], form.publisher.data, form.source.data, form.year.data)
+    article.account_id = current_user.id
 
-    db.session().add(a)
+    db.session().add(article)
     db.session().commit()
 
     return redirect(url_for("artikkelit_index"))
