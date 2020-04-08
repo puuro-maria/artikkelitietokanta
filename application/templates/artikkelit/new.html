@@ -5,85 +5,60 @@
 
 <form method="POST" action="{{ url_for('artikkelit_create') }}">
   <div class="form-group">
-    <td>
-    {{ form.name.label }}
-      </td>
-      <td>
-        {{ form.name }}
-      </td>
-      <td>
+
+    <label>{{ form.name.label }}</label>
+      <br>{{ form.name(placeholder="Title") }}
         <ul>
           {% for error in form.name.errors %}
           <li>{{ error }}</li>
           {% endfor %}
         </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{ form.authors.label }}
-      </td>
-      <td>
-        {{ form.authors }}
-      </td>
-      <td>
+  </div>
+  <div class="form-group"></div>
+  
+        <label>{{ form.authors.label }}</label>
+
+        <br>{{ form.authors(placeholder="Authors") }}
+        <small id="Help" class="form-text text-muted">Fill in authors, separate with comma.</small>
+
         <ul>
           {% for error in form.authors.errors %}
           <li>{{ error }}</li>
           {% endfor %}
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{ form.publisher.label }}
-      </td>
-      <td>
-        {{ form.publisher }}
-      </td>
-      <td>
+  
+  </div>
+  <div class="form-group"></div>
+
+        <label>{{ form.publisher.label }}</label>
+
+        <br>{{ form.publisher(placeholder="Publisher") }}
+
         <ul>
           {% for error in form.publisher.errors %}
           <li>{{ error }}</li>
           {% endfor %}
         </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{ form.year.label }}
-      </td>
-      <td>
-        {{ form.year }}
-      </td>
-      <td>
+
+  </div>
+  <div class="form-group"></div>
+        <label>{{ form.year.label }}</label>
+        <br>{{ form.year(placeholder="Year published") }}
         <ul>
           {% for error in form.year.errors %}
           <li>{{ error }}</li>
           {% endfor %}
         </ul>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        {{ form.source.label }}
-      </td>
-      <td>
-        {{ form.source }}
-      </td>
-      <td>
+  </div>
+  <div class="form-group"></div>
+        <label>{{ form.source.label }}</label>
+        <br>{{ form.source(placeholder="Source e.g. a link to pdf") }}
         <ul>
           {% for error in form.source.errors %}
           <li>{{ error }}</li>
           {% endfor %}
         </ul>
-      </td>
-          </tr>
-          <tr>
-      <td colspan="2">
-        <input type="submit" value="Add a new article"/>
-      </td>
-    </tr>
+    </div>
+        <button type="submit" class="btn btn-primary">Add an article</button>
 </form>
 
 {% endblock %}
