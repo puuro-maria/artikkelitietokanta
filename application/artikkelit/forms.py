@@ -6,7 +6,7 @@ class ArtikkeliForm(FlaskForm):
     publisher = StringField("Publisher", [validators.DataRequired()])
     authors = StringField("Author", [validators.DataRequired()])
     source = StringField("Source", [validators.DataRequired()])
-    year = IntegerField("Year published", [validators.DataRequired()])
+    year = IntegerField("Year published", [validators.NumberRange(min=0, max=None, message="Positive integer required")])
     read = BooleanField("Read")
 
     class Meta:
