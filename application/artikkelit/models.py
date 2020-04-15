@@ -14,6 +14,7 @@ class Artikkeli(Base):
     account_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)
 
     authors = relationship("Author", secondary="articleauthor")
+    keywords = relationship("Keyword", secondary="articlekeyword")
 
     def __init__(self, name, authors, publisher, source, year, read = False):
         self.name = name

@@ -21,6 +21,8 @@ from application import models
 from application.artikkelit import models
 from application.artikkelit import views
 
+from application.keywords import models
+
 from application.author import models
 
 from application.articleauthor import models
