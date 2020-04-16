@@ -5,6 +5,7 @@ from flask_login import login_required, current_user
 from application.artikkelit.models import Artikkeli
 from application.artikkelit.forms import ArtikkeliForm
 from application.author.models import Author
+from application.keyword.models import Keyword
 
 @app.route("/artikkelit", methods=["GET"])
 @login_required
@@ -58,7 +59,8 @@ def artikkelit_create():
         return render_template("artikkelit/new.html", form = form)
 
     author = Author(form.authors.data)
-    article = Artikkeli(form.name.data, [author], form.publisher.data, form.source.data, form.year.data)
+    keyword = Keyword(form.keywords.data)
+    article = Artikkeli(form.name.data, [author], form.publisher.data, [keyword], form.source.data, form.year.data)
     article.account_id = current_user.id
 
     db.session().add(article)

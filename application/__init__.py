@@ -21,11 +21,12 @@ from application import models
 from application.artikkelit import models
 from application.artikkelit import views
 
-from application.keywords import models
+from application.keyword import models
 
 from application.author import models
 
 from application.articleauthor import models
+from application.articlekeyword import models
 
 from application.auth import models 
 from application.auth import views
