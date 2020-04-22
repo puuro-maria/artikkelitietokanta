@@ -57,7 +57,11 @@ def artikkelit_create():
 
     if not form.validate():
         return render_template("artikkelit/new.html", form = form)
-
+#Tämä ei toimi:
+    #author = []
+    #authors = form.authors.data.split(",")
+    #for a in authors:
+     #   author.append(Author(a))
     author = Author(form.authors.data)
     keyword = Keyword(form.keywords.data)
     article = Artikkeli(form.name.data, [author], form.publisher.data, [keyword], form.source.data, form.year.data)
