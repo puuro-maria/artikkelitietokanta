@@ -7,6 +7,7 @@ from application.artikkelit.models import Artikkeli
 from application.artikkelit.forms import ArtikkeliForm
 from application.author.models import Author
 from application.keyword.models import Keyword
+from application.articleauthor.models import ArticleAuthor
 
 @app.route("/artikkelit", methods=["GET"])
 @login_required
@@ -19,8 +20,8 @@ def artikkelit_index():
 @login_required
 def artikkelit_search():
     word = request.form.get("word")
-    preresults = Artikkeli.query.filter(or_((Artikkeli.name.like(word)), (Author.name.like(word)), (Keyword.name.like(word)), (Artikkeli.publisher.like(word))))
-    return render_template("search.html", results = preresults.filter_by(account_id = current_user.id))
+    preresults = db.session.query(Artikkeli).join(ArticleAuthor, Artikkeli.id == ArticleAuthor.article_id).join(Author, Author.id == ArticleAuthor.author_id).filter(or_((Artikkeli.name.like(word)), (Author.name.like(word)), (Keyword.name.like(word)), (Artikkeli.publisher.like(word)))).filter(Artikkeli.account_id == current_user.id)
+    return render_template("search.html", results = preresults)
 
 
 @app.route("/artikkelit/new/")
