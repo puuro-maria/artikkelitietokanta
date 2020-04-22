@@ -1,6 +1,7 @@
 from application import app, db
 from flask import redirect, render_template, request, url_for
 from flask_login import login_required, current_user
+from sqlalchemy import or_
 
 from application.artikkelit.models import Artikkeli
 from application.artikkelit.forms import ArtikkeliForm
@@ -13,6 +14,14 @@ def artikkelit_index():
     return render_template("artikkelit/list.html", articles = Artikkeli.query.filter_by(account_id = current_user.id), 
     unread_articles=Artikkeli.list_unread_articles(current_user.id), 
     summary = Artikkeli.article_summary(current_user.id))
+
+@app.route("/search/", methods=["GET", "POST"])
+@login_required
+def artikkelit_search():
+    word = request.form.get("word")
+    preresults = Artikkeli.query.filter(or_((Artikkeli.name.like(word)), (Author.name.like(word)), (Keyword.name.like(word)), (Artikkeli.publisher.like(word))))
+    return render_template("search.html", results = preresults.filter_by(account_id = current_user.id))
+
 
 @app.route("/artikkelit/new/")
 @login_required
@@ -58,10 +67,10 @@ def artikkelit_create():
     if not form.validate():
         return render_template("artikkelit/new.html", form = form)
 #Tämä ei toimi:
-    #author = []
+    #author = set()
     #authors = form.authors.data.split(",")
     #for a in authors:
-     #   author.append(Author(a))
+      #  author.add(Author(a))
     author = Author(form.authors.data)
     keyword = Keyword(form.keywords.data)
     article = Artikkeli(form.name.data, [author], form.publisher.data, [keyword], form.source.data, form.year.data)

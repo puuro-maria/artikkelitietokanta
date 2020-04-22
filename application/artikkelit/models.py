@@ -38,6 +38,7 @@ class Artikkeli(Base):
 
         return response
 
+
     @staticmethod
     def article_summary(account_id):
 
