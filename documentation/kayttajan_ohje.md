@@ -36,7 +36,7 @@ Uuden artikkelin/teoksen lisääminen tapahtuu klikkaamalla **Add an article** n
 
 Klikkaamalla **Add an article** nappia sovellus luo uuden artikkelin käyttäjän omalle listalle.
 
-## Artikkelien tarkastelu
+## Teosten tarkastelu
 
 Käyttäjä voi tarkastella omia artikkeleitaan klikkaamalla yläpalkista **List articles** nappia. Tällöin avautuu lista kaikista käyttäjän artikkeleista. Listalla voit:
 
@@ -51,3 +51,17 @@ Näkymään aukeaa myös lista lukemattomista artikkeleista ja artikkelien lukum
 ## Koko tietokannan tarkastelu admin-oikeuksilla
 
 Pääkäyttäjä (admin) voi tarkastella ja muokata koko tietokantaa klikkaamalla yläpalkin nappia **List all articles in database**.
+
+## Teosten hakeminen
+
+Teoksia voi hakea tietokannasta:
+
+- teoksen nimellä
+
+- kirjoittajan nimellä
+
+- julkaisijalla
+
+- avainsanoilla.
+
+Haku tapahtuu yläpalkissa syöttämällä hakusana *Search*-tekstikenttään ja klikkaamalla **Search**. Kaikki haetulla sanalla löytyvät hakutunnukset avautuvat näkymään.
