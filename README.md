@@ -19,7 +19,7 @@ Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Goog
  
     - salasana: testi
     
- ** Huomioitavaa: **
+ **Huomioitavaa:**
  
  - Toistaiseksi sovellus ei toimi vielä odotetusti kun syötetään useampi kirjoittaja (author) tai avainsana (keyword)
  
