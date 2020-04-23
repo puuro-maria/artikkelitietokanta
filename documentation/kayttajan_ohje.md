@@ -4,13 +4,13 @@
 
 Rekisteröityminen tapahtuu etusivulla klikkaamalla **Sign up** nappia. Käyttäjältä pyydetään:
 
-    - nimimerkki (username)
+- nimimerkki (username)
 
-    - nimi (name)
+- nimi (name)
 
-    - salasana (password)
+- salasana (password)
 
-    - toista salasana (repeat password).
+- toista salasana (repeat password).
 
 Kun käyttäjä on syöttänyt tarvittavat kentät, sovellus luo uuden tunnuksen kun painaa **Register** nappia.
 
@@ -22,17 +22,17 @@ Sisäänkirjautuminen tapahtuu klikkaamalla yläpalkista **Sign in** nappia. Sov
 
 Uuden artikkelin/teoksen lisääminen tapahtuu klikkaamalla **Add an article** nappia. Sovellus pyytää käyttäjältä:
 
-    - artikkelin otsikon (title)
+- artikkelin otsikon (title)
 
-    - kirjoittajat (authors), jotka erotellaan toisistaan pilkulla
+- kirjoittajat (authors), jotka erotellaan toisistaan pilkulla
 
-    - julkaisijan (publisher)
+- julkaisijan (publisher)
 
-    - avainsanat (keywords), jotka erotellaan toisistaan pilkulla
+- avainsanat (keywords), jotka erotellaan toisistaan pilkulla
 
-    - julkaisuvuoden (year published)
+- julkaisuvuoden (year published)
 
-    - lähteen (source).
+- lähteen (source).
 
 Klikkaamalla **Add an article** nappia sovellus luo uuden artikkelin käyttäjän omalle listalle.
 
@@ -40,11 +40,11 @@ Klikkaamalla **Add an article** nappia sovellus luo uuden artikkelin käyttäjä
 
 Käyttäjä voi tarkastella omia artikkeleitaan klikkaamalla yläpalkista **List articles** nappia. Tällöin avautuu lista kaikista käyttäjän artikkeleista. Listalla voit:
 
-    - vaihtaa artikkelin lähdettä (esim. uusi linkki) kirjoittamalla uuden lähteen tekstikenttään ja klikkaamalla **Change source** nappia.
+- vaihtaa artikkelin lähdettä (esim. uusi linkki) kirjoittamalla uuden lähteen tekstikenttään ja klikkaamalla **Change source** nappia.
 
-    - merkitä teoksen luetuksi klikkaamalla **Mark as read** nappia.
+- merkitä teoksen luetuksi klikkaamalla **Mark as read** nappia.
 
-    - poistaa teoksen klikkaamalla **Delete this article** nappia.
+- poistaa teoksen klikkaamalla **Delete this article** nappia.
 
 Näkymään aukeaa myös lista lukemattomista artikkeleista ja artikkelien lukumäärä kirjoittajittain.
 
