@@ -1,5 +1,5 @@
 from application import app, db, login_required
-from flask import redirect, render_template, request, url_for
+from flask import redirect, render_template, request, url_for, flash
 from flask_login import current_user
 from sqlalchemy import or_
 
@@ -24,6 +24,10 @@ def artikkelit_search():
     preresults = db.session.query(Artikkeli).join(ArticleAuthor, Artikkeli.id == ArticleAuthor.article_id).join(Author, Author.id == ArticleAuthor.author_id).join(ArticleKeyword, Artikkeli.id == ArticleKeyword.article_id).join(Keyword, Keyword.id == ArticleKeyword.keyword_id).filter(or_((Artikkeli.name.like(word)), (Author.name.like(word)), (Keyword.name.like(word)), (Artikkeli.publisher.like(word)))).filter(Artikkeli.account_id == current_user.id)
     return render_template("search.html", results = preresults)
 
+@app.route("/all", methods=["GET"])
+@login_required(role="ADMIN")
+def artikkelit_list_all():
+    return render_template("artikkelit/listall.html", articles = Artikkeli.query.all())
 
 @app.route("/artikkelit/new/")
 @login_required
