@@ -4,7 +4,7 @@
 
 Kirjoita komentoriville:
 
-```console
+```
 git clone https://github.com/puuro-maria/artikkelitietokanta
 cd artikkelitietokanta
 ```
@@ -13,7 +13,7 @@ cd artikkelitietokanta
 
 Kun olet kloonannut sovelluksen tiedostot Githubista, kirjoita komentoriville:
 
-```console
+```
 pip install -r requirements.txt
 ```
 
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 Käynnistä sovellus kirjoittamalla komentoriville: 
 
-```console
+```
 python run.py
 ```
 

@@ -8,6 +8,7 @@ class User(Base):
     name = db.Column(db.String(144), nullable=False)
     username = db.Column(db.String(144), nullable=False)
     password = db.Column(db.String(144), nullable=False)
+    isadmin = db.Column(db.Boolean, nullable=False)
 
     artikkelit = db.relationship("Artikkeli", backref='account', lazy=True)
 
@@ -15,6 +16,7 @@ class User(Base):
         self.name = name
         self.username = username
         self.password = password
+        self.isadmin=False
   
     def get_id(self):
         return self.id
@@ -27,3 +29,9 @@ class User(Base):
 
     def is_authenticated(self):
         return True
+    
+    def roles(self):
+        if self.isadmin:
+            return ["ADMIN", "USER"]
+        else: 
+            return ["USER"]
