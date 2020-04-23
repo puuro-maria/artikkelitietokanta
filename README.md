@@ -18,5 +18,11 @@ Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Goog
     - käyttäjätunnus: testi
  
     - salasana: testi
+    
+ ** Huomioitavaa: **
+ 
+ - Toistaiseksi sovellus ei toimi vielä odotetusti kun syötetään useampi kirjoittaja (author) tai avainsana (keyword)
+ 
+     - Sovellus kuitenkin ottaa vastaan tällaiset merkkijonot
 
 
