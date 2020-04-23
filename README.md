@@ -7,7 +7,7 @@ Käyttäjä pystyy lisäämään teosten nimiä ja niihin liittyviä avainsanoja
 Hakuja voi tehdä avainsanoilla, vuosiluvuilla ja artikkelien tai kirjoittajien nimillä.
 Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Google Scholar, EBSCO, HY:n kirjasto jne). 
 
-[Tietokantakaavio - ensimmäinen luonnos](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/Tietokantakaavio_artikkelitietokanta.JPG)
+[Tietokantakaavio](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/ATK_Tietokantakaavio.PNG)
 
 [Käyttötapaukset](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kayttotapaukset.md)
 
