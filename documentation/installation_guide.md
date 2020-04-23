@@ -44,3 +44,8 @@ Sitten päivitä account-tauluun pääkäyttäjäoikeudet seuraavalla komennolla
 UPDATE account SET isadmin = 1 WHERE username = 'nimimerkki';
 ```
 
+Pääkäyttäjällä on oikeus katsella koko artikkelitietokantaa ja poistaa artikkeleita, muuttaa niiden lähteitä ja merkitä luetuksi. 
+
+## Sovelluksen vieminen pilveen
+
+Sovelluksen voi viedä pilveen. Projektissa on konfiguraatiotiedostot, jotta sovelluksen voi viedä Herokuun. [Yksityiskohtaiset ohjeet sovelluksen viemiseen Herokuun](https://devcenter.heroku.com/articles/git)
