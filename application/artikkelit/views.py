@@ -73,14 +73,20 @@ def artikkelit_create():
     if not form.validate():
         return render_template("artikkelit/new.html", form = form)
 #Tämä ei toimi:
-    #author = set()
-    #authors = form.authors.data.split(",")
-    #for a in authors:
-      #  author.add(Author(a))
-    author = Author(form.authors.data)
+
+    #author = Author(form.authors.data)
     keyword = Keyword(form.keywords.data)
-    article = Artikkeli(form.name.data, [author], form.publisher.data, [keyword], form.source.data, form.year.data)
+    article = Artikkeli(form.name.data, form.publisher.data, form.source.data, form.year.data)
+
     article.account_id = current_user.id
+
+    authors = form.authors.data.split(",")
+    for a in authors:
+        article.authors.append(Author(a))
+
+    keywords = form.keywords.data.split(",")
+    for k in keywords:
+        article.keywords.append(Keyword(k))
 
     db.session().add(article)
     db.session().commit()

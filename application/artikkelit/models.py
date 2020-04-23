@@ -16,11 +16,9 @@ class Artikkeli(Base):
     authors = relationship("Author", secondary="articleauthor")
     keywords = relationship("Keyword", secondary="articlekeyword")
 
-    def __init__(self, name, authors, publisher, keywords, source, year, read = False):
+    def __init__(self, name,  publisher, source, year, read = False):
         self.name = name
-        self.authors = authors
         self.publisher = publisher
-        self.keywords = keywords
         self.source = source
         self.year = year
         self.read = read

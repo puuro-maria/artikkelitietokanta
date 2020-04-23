@@ -17,11 +17,11 @@
     <tr>
        <td>{{artikkeli.name}}</td>
        <td>{% for author in artikkeli.authors %}
-          {{author.name}}, 
+          {{author.name}}<br/> 
           {% endfor %}</td>
        <td>{{artikkeli.publisher}}</td>
        <td>{% for keyword in artikkeli.keywords %}
-        {{keyword.name}},
+        {{keyword.name}}<br/>
         {% endfor %}
       </td>
        <td>{{artikkeli.source}}</td>
