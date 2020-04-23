@@ -11,6 +11,8 @@ Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Goog
 
 [Käyttötapaukset](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kayttotapaukset.md)
 
+[Asennusohje](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/installation_guide.md)
+
 [Sovellus Herokussa](https://artikkelitietokanta.herokuapp.com/)
 
 - Testikäyttäjän tunnukset:
