@@ -5,7 +5,7 @@ class RegisterForm(FlaskForm):
     username = StringField("Username", [validators.DataRequired()])
     name = StringField("Name", [validators.DataRequired()])
     password = PasswordField("Password", [validators.DataRequired()])
-    confirm = PasswordField("Repeat Password", [validators.EqualTo(password, message="Must match password")])
+    confirm = PasswordField("Repeat Password", [validators.DataRequired()])
   
     class Meta:
         csrf = False
