@@ -31,9 +31,11 @@
         <li class="nav-item">
           <a class="nav-link" href="{{url_for('artikkelit_index')}}">List your articles</a>
         </li>
+        {% if current_user.isadmin %}
         <li class="nav-item">
-          <a class="nav-link" href="{{url_for('artikkelit_list_all')}}">List all articles in database</a>
+          <a class="nav-link" href="{{url_for('artikkelit_list_all')}}">List all articles</a>
         </li>
+        {% endif %}
       </ul>
       <form method="POST" class="form-inline mt-2 mt-md-0" name="search" action = "{{url_for('artikkelit_search')}}">
 
