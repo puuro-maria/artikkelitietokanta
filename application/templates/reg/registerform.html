@@ -9,7 +9,7 @@
 	{{ form.username.label }}
       </td>
       <td>
-	{{ form.username }}
+	{{ form.username(placeholder="Username") }}
       </td>
     </tr>
     <tr>
@@ -17,7 +17,7 @@
 	{{ form.name.label }}
       </td>
       <td>
-	{{ form.name }}
+	{{ form.name(placeholder="Your name") }}
       </td>
     </tr>
     <tr>
@@ -25,7 +25,7 @@
 	{{ form.password.label }}
       </td>
       <td>
-	{{ form.password }}
+	{{ form.password(placeholder="Password") }}
       </td>
     </tr>
     <tr>
@@ -33,15 +33,11 @@
       {{ form.confirm.label }}
         </td>
         <td>
-      {{ form.confirm }}
+      {{ form.confirm(placeholder="Repeat password") }}
         </td>
       </tr>
-    <tr>
-      <td colspan="2">
-        <form method="POST" action="{{ url_for('reg_register') }}">
-            <input type="submit" value="Register"/>
-          </form>
-      </td>
-    </tr>
+      <tr>
+        <td><input type="submit" value="Register" class="btn btn-primary"/></td>
+      </tr>
 </form>
 {% endblock %}

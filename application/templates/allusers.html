@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Username</th>
+      <th scope="col">Name</th>
+      <th scope="col">No of articles</th>
+      <th scope="col">No of unread articles</th>
+    </tr>
+    </thead>
+    <tbody>
+  {% for account in accounts %}
+    <tr>
+       <td>{{account.username}}</td>
+       <td>{{account.name}}</td>
+       <td>{{account.articles}}</td>
+       <td>{{account.unread}}</td>
+
+       <td>
+        <form method="POST" action="{{ url_for('auth_reset_password', account_id=account.id) }}">
+          <input type="text" name="password"/>
+          <input type="submit" value="Reset password"/>
+        </form>
+      </td>
+
+      <td><form method="POST" action="{{ url_for('auth_delete', account_id = account.id) }}">
+        <input type="submit" value="Delete this account"/>
+      </form>
+     </td>
+    </td>
+
+    </tr>
+  {% endfor %}
+  </tbody>
+ </table>
+
+{% endblock %}

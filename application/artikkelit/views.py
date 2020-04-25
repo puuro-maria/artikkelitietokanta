@@ -72,10 +72,7 @@ def artikkelit_create():
 
     if not form.validate():
         return render_template("artikkelit/new.html", form = form)
-#Tämä ei toimi:
 
-    #author = Author(form.authors.data)
-    keyword = Keyword(form.keywords.data)
     article = Artikkeli(form.name.data, form.publisher.data, form.source.data, form.year.data)
 
     article.account_id = current_user.id
@@ -93,4 +90,3 @@ def artikkelit_create():
 
     return redirect(url_for("artikkelit_index"))
     
-
