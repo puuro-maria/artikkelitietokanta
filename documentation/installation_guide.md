@@ -14,6 +14,7 @@ cd artikkelitietokanta
 Kun olet kloonannut sovelluksen tiedostot Githubista, kirjoita komentoriville:
 
 ```
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
