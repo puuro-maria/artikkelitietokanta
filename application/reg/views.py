@@ -19,10 +19,15 @@ def reg_register():
         username  = form.username.data
         name = form.name.data
         password = form.password.data
-        u = User(name, username, password)
 
-        db.session().add(u)
-        db.session().commit()
+        users = User.query.filter_by(username=username).first()
 
-        return redirect(url_for("artikkelit_index"))
+        if users:
+            return render_template("reg/registerform.html", form = form, error = "Username taken, pick a new one!")
+
+        if not users:
+            u = User(name, username, password)
+            db.session().add(u)
+            db.session().commit()
+            return redirect(url_for("artikkelit_index"))
         
