@@ -38,18 +38,3 @@ class User(Base):
             return ["ADMIN", "USER"]
         else: 
             return ["USER"]
-
-    @staticmethod
-    def account_summary(account_id):
-        stmt = text("SELECT username, account.name, COUNT(artikkeli.id) AS 'articles', SUM(artikkeli.read) AS 'read articles'"
-                    "FROM account INNER JOIN artikkeli ON account.id = artikkeli.account_id "
-                    "WHERE account.id = :account_id").params(account_id = account_id)
-        res = db.engine.execute(stmt)
-        response = []
-
-        for row in res:
-            response.append({"username":row[0], "name":row[1], "articles":row[2], "unread":row[3]})
-        
-        return response
-
-
