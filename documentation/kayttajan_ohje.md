@@ -65,3 +65,15 @@ Teoksia voi hakea tietokannasta:
 - avainsanoilla.
 
 Haku tapahtuu yläpalkissa syöttämällä hakusana *Search*-tekstikenttään ja klikkaamalla **Search**. Kaikki haetulla sanalla löytyvät hakutunnukset avautuvat näkymään.
+
+## Oman tilin hallinnointi
+
+Käyttäjä voi hallita omaa tiliään. Käyttäjä pystyy:
+
+- muuttamaan salasanan
+
+- poistamaan tilin.
+
+Tämä tapahtuu yläpalkin napista **Manage my account**. Kun käyttäjätili poistetaan, myös kyseisen käyttäjän kaikki artikkelit poistetaan samalla tietokannasta.
+
+Pääkäyttäjä pystyy tekemään yllämainitut toimenpiteet kaikille artikkelitietokannan käyttäjätileille.
