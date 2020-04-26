@@ -25,10 +25,10 @@
           <a class="nav-link" href="{{ url_for('reg_register') }}">Sign up</a>
         </li>
         {% endif %}
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="{{url_for('artikkelit_form')}}">Add an article</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="{{url_for('artikkelit_index')}}">List your articles</a>
         </li>
         {% if current_user.isadmin %}
@@ -36,6 +36,9 @@
           <a class="nav-link" href="{{url_for('artikkelit_list_all')}}">List all articles</a>
         </li>
         {% endif %}
+        <li class="nav-item active">
+          <a class="nav-link" href="{{url_for('auth_manage_account', account_id = current_user.id)}}">Manage my account</a>
+        </li>
         {% if current_user.isadmin %}
         <li class="nav-item">
           <a class="nav-link" href="{{url_for('auth_list_all_users')}}">Manage accounts</a>

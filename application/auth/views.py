@@ -1,5 +1,5 @@
 from flask import render_template, request, redirect, url_for
-from flask_login import login_user, logout_user
+from flask_login import login_user, logout_user, current_user
 
 import sqlalchemy as sa
 from sqlalchemy.orm import relationship
@@ -40,8 +40,14 @@ def auth_list_all_users():
     return render_template("allusers.html", accounts = db.session.query(User.id, User.username, User.name, sa.func.count(Artikkeli.id).label('articles'), sa.func.sum(Artikkeli.read).label('readread')).join(Artikkeli, Artikkeli.account_id == User.id).group_by(User.id))
 
 
+@app.route("/manageaccount/<account_id>/", methods=["GET"])
+@login_required
+def auth_manage_account(account_id):
+
+    return render_template("manageaccount.html", accounts = db.session.query(User.id, User.username, User.name, sa.func.count(Artikkeli.id).label('articles'), sa.func.sum(Artikkeli.read).label('readread')).join(Artikkeli, Artikkeli.account_id == User.id).group_by(User.id).filter_by(account_id = current_user.id))
+
 @app.route("/auth/deleteaccount/<account_id>/", methods=["POST"])
-@login_required(role="ADMIN")
+@login_required
 def auth_delete(account_id):
     user = User.query.get(account_id)
     articles = Artikkeli.query.get(account_id)
@@ -52,7 +58,7 @@ def auth_delete(account_id):
     return redirect(url_for("auth_list_all_users"))
 
 @app.route("/auth/reset_password/<account_id>/", methods=["POST"])
-@login_required(role="ADMIN")
+@login_required
 def auth_reset_password(account_id):
     user = User.query.get(account_id)
     user.password = (request.form.get("password"))
