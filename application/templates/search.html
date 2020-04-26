@@ -28,19 +28,19 @@
        <td>{{artikkeli.year}}</td>
        <td>{{artikkeli.read}}
          <td><form method="POST" action="{{url_for('artikkeli_set_read', artikkeli_id = artikkeli.id)}}">
-           <input type="submit" value="Mark as read"/>
+           <input type="submit" value="Mark as read" class="btn btn-primary">
          </form>
         </td>
        </td>
        <td>
         <form method="POST" action="{{ url_for('artikkeli_change_source', artikkeli_id=artikkeli.id) }}">
           <input type="text" name="source"/>
-          <input type="submit" value="Change source"/>
+          <input type="submit" value="Change source" class="btn btn-primary">
         </form>
       </td>
       <td>
         <form method="POST" action="{{ url_for('artikkeli_delete', artikkeli_id=artikkeli.id) }}">
-          <input type="submit" value="Delete this article"/>
+          <input type="submit" value="Delete this article" class="btn btn-danger">
         </form>
             </td>
     </tr>

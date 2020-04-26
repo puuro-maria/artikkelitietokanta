@@ -20,7 +20,8 @@ def artikkelit_index():
 @app.route("/search/", methods=["GET", "POST"])
 @login_required
 def artikkelit_search():
-    word = request.form.get("word")
+    wd = request.form.get("word")
+    word = "%{}%".format(wd)
     preresults = db.session.query(Artikkeli).join(ArticleAuthor, Artikkeli.id == ArticleAuthor.article_id).join(Author, Author.id == ArticleAuthor.author_id).join(ArticleKeyword, Artikkeli.id == ArticleKeyword.article_id).join(Keyword, Keyword.id == ArticleKeyword.keyword_id).filter(or_((Artikkeli.name.like(word)), (Author.name.like(word)), (Keyword.name.like(word)), (Artikkeli.publisher.like(word)))).filter(Artikkeli.account_id == current_user.id)
     return render_template("search.html", results = preresults)
 
