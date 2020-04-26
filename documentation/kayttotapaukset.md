@@ -11,6 +11,31 @@
 
 - [x] Käyttäjä voi kirjautua sisään järjestelmään
 
+- [x] Käyttäjä voi vaihtaa tilinsä salasanan (pääkäyttäjä voi vaihtaa jokaisen tilin salasanan)
+
+    ```sql
+    UPDATE account SET password = 'uusisalasana'
+    WHERE id = 1;
+    ```
+    
+- [x] Käyttäjä voi poistaa oman tunnuksensa artikkelitietokannasta (pääkäyttäjä voi poistaa kaikkien tunnukset)
+
+    ```sql
+    DELETE FROM account 
+    WHERE id = 1;
+    
+    DELETE FROM artikkeli
+    WHERE account_id = 1;
+    ```
+    
+- [x] Käyttäjä näkee, kuinka monta artikkelia hänellä on listallaan ja kuinka moni niistä on luettu
+
+    ```sql
+    SELECT username, account.name, COUNT(artikkeli.id), SUM(artikkeli.read)
+        FROM account INNER JOIN artikkeli ON account.id = artikkeli.account_id
+            WHERE account.id = 1;
+    ```
+
 - [x] Käyttäjä voi lisätä uuden teoksen tietokantaan
 
     ```sql
