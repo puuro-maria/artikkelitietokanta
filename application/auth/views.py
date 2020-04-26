@@ -44,6 +44,8 @@ def auth_list_all_users():
 @login_required(role="ADMIN")
 def auth_delete(account_id):
     user = User.query.get(account_id)
+    articles = Artikkeli.query.get(account_id)
+    db.session.delete(articles)
     db.session.delete(user)
     db.session.commit()
 

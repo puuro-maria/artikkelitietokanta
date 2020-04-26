@@ -51,3 +51,5 @@ class User(Base):
             response.append({"username":row[0], "name":row[1], "articles":row[2], "unread":row[3]})
         
         return response
+
+

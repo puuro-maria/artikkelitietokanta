@@ -21,12 +21,12 @@
        <td>
         <form method="POST" action="{{ url_for('auth_reset_password', account_id=account.id) }}">
           <input type="text" name="password"/>
-          <input type="submit" value="Reset password"/>
+          <input type="submit" value="Reset password" class="btn btn-primary">
         </form>
       </td>
 
       <td><form method="POST" action="{{ url_for('auth_delete', account_id = account.id) }}">
-        <input type="submit" value="Delete this account"/>
+        <input type="submit" value="Delete this account" class="btn btn-danger">
       </form>
      </td>
     </td>
