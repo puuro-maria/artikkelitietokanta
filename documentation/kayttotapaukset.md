@@ -32,7 +32,7 @@
 
     ```sql
     SELECT username, account.name, COALESCE(COUNT(artikkeli.id), 0)
-        FROM account INNER JOIN artikkeli ON account.id = artikkeli.account_id
+        FROM account OUTER JOIN artikkeli ON account.id = artikkeli.account_id
             WHERE account.id = 1
             GROUP BY username;
     ```
