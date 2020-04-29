@@ -31,7 +31,7 @@
 - [x] Käyttäjä näkee, kuinka monta artikkelia hänellä on listallaan (pääkäyttäjä näkee myös muiden käyttäjien listat)
 
     ```sql
-    SELECT username, account.name, COUNT(artikkeli.id)
+    SELECT username, account.name, COALESCE(COUNT(artikkeli.id), 0)
         FROM account INNER JOIN artikkeli ON account.id = artikkeli.account_id
             WHERE account.id = 1
             GROUP BY username;
