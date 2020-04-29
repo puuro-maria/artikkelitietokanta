@@ -33,7 +33,8 @@
     ```sql
     SELECT username, account.name, COUNT(artikkeli.id)
         FROM account INNER JOIN artikkeli ON account.id = artikkeli.account_id
-            WHERE account.id = 1;
+            WHERE account.id = 1
+            GROUP BY username;
     ```
     
 - [x] Käyttäjä näkee listan kirjoittajista ja kyseisten kirjoittajien teosten lukumäärän lukulistalla
