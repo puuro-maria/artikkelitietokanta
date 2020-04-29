@@ -1,6 +1,6 @@
 # Asennusohje
 
-## Lataa sovellus GitHubista
+## Lataa sovellus GitHubista 
 
 Kirjoita komentoriville:
 
@@ -8,6 +8,8 @@ Kirjoita komentoriville:
 git clone https://github.com/puuro-maria/artikkelitietokanta
 cd artikkelitietokanta
 ```
+
+![alt-text](https://media3.giphy.com/media/TlK63EA6F1qRb7lll6M/200w.webp?cid=ecf05e471e3fb2ff39279dcb6e81ba1c3d381a8e959f0c15&rid=200w.webp)
 
 ## Lataa riippuvuudet
 
