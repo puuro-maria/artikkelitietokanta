@@ -28,13 +28,24 @@
     WHERE account_id = 1;
     ```
     
-- [x] Käyttäjä näkee, kuinka monta artikkelia hänellä on listallaan ja kuinka moni niistä on luettu
+- [x] Käyttäjä näkee, kuinka monta artikkelia hänellä on listallaan (pääkäyttäjä näkee myös muiden käyttäjien listat)
 
     ```sql
-    SELECT username, account.name, COUNT(artikkeli.id), SUM(artikkeli.read)
+    SELECT username, account.name, COUNT(artikkeli.id)
         FROM account INNER JOIN artikkeli ON account.id = artikkeli.account_id
             WHERE account.id = 1;
     ```
+    
+- [x] Käyttäjä näkee listan kirjoittajista ja kyseisten kirjoittajien teosten lukumäärän lukulistalla
+
+    ```sql
+    SELECT author.name, COUNT(artikkeli.id)
+        FROM author INNER JOIN
+        articleauthor ON author.id = articleauthor.author_id INNER JOIN
+        artikkeli ON artikkeli.id = articleauthor.article_id
+            WHERE artikkeli.account_id = 1
+            GROUP BY author.name;
+     ```
 
 - [x] Käyttäjä voi lisätä uuden teoksen tietokantaan
 
