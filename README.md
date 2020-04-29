@@ -37,7 +37,7 @@ Sovellus on tehty Helsingin Yliopiston tietojenkäsittelytieteiden tiedekunnan [
     
     **salasana:** salasana
     
-## Kehitysehdotuksia
+## Kehitysehdotuksia :bulb:
 
 - Artikkelin voisi pystyä merkkaamaan myös luetusta lukemattomaksi.
 
