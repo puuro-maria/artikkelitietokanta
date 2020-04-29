@@ -19,7 +19,7 @@
 
        <td>
         <form method="POST" action="{{ url_for('auth_reset_password', account_id=account.id) }}">
-          <input type="text" name="password"/>
+          <input type="text" name="password" required>
           <input type="submit" value="Reset password" class="btn btn-primary">
         </form>
       </td>
