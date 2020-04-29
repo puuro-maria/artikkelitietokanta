@@ -43,8 +43,9 @@ def auth_list_all_users():
 @app.route("/manageaccount/<account_id>/", methods=["GET"])
 @login_required
 def auth_manage_account(account_id):
+    articlelist = db.session.query(Artikkeli.account_id, Artikkeli.id).filter_by(account_id = current_user.id)
 
-    return render_template("manageaccount.html", accounts = db.session.query(User.id, User.username, User.name, (sa.func.coalesce(sa.func.count(Artikkeli.id), 0)).label('articles')).outerjoin(Artikkeli, Artikkeli.account_id == User.id).group_by(User.id).filter_by(account_id = current_user.id))
+    return render_template("manageaccount.html", account = User.query.get(account_id), articles = articlelist.count())
 
 @app.route("/auth/deleteaccount/<account_id>/", methods=["POST"])
 @login_required
@@ -55,7 +56,7 @@ def auth_delete(account_id):
     db.session.delete(user)
     db.session.commit()
 
-    return redirect(url_for("auth_list_all_users"))
+    return redirect(url_for("index"))
 
 @app.route("/auth/reset_password/<account_id>/", methods=["POST"])
 @login_required
@@ -64,4 +65,4 @@ def auth_reset_password(account_id):
     user.password = (request.form.get("password"))
     db.session().commit()
 
-    return redirect(url_for("auth_list_all_users"))
+    return redirect(url_for("index"))

@@ -7,15 +7,13 @@
       <th scope="col">Username</th>
       <th scope="col">Name</th>
       <th scope="col">No of articles</th>
-      <th scope="col">No of read articles</th>
     </tr>
     </thead>
     <tbody>
-  {% for account in accounts %}
     <tr>
        <td>{{account.username}}</td>
        <td>{{account.name}}</td>
-       <td>{{account.articles}}</td>
+       <td>{{articles}}</td>
 
        <td>
         <form method="POST" action="{{ url_for('auth_reset_password', account_id=account.id) }}">
@@ -31,7 +29,6 @@
     </td>
 
     </tr>
-  {% endfor %}
   </tbody>
  </table>
 
