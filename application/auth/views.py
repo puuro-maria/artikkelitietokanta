@@ -37,14 +37,14 @@ def auth_logout():
 @login_required(role="ADMIN")
 def auth_list_all_users():
 
-    return render_template("allusers.html", accounts = db.session.query(User.id, User.username, User.name, sa.func.count(Artikkeli.id).label('articles'), sa.func.sum(Artikkeli.read).label('readread')).join(Artikkeli, Artikkeli.account_id == User.id).group_by(User.id))
+    return render_template("allusers.html", accounts = db.session.query(User.id, User.username, User.name, sa.func.coalesce(sa.func.count(Artikkeli.id), 0).label('articles')).outerjoin(Artikkeli, Artikkeli.account_id == User.id).group_by(User.id))
 
 
 @app.route("/manageaccount/<account_id>/", methods=["GET"])
 @login_required
 def auth_manage_account(account_id):
 
-    return render_template("manageaccount.html", accounts = db.session.query(User.id, User.username, User.name, sa.func.count(Artikkeli.id).label('articles'), sa.func.sum(Artikkeli.read).label('readread')).join(Artikkeli, Artikkeli.account_id == User.id).group_by(User.id).filter_by(account_id = current_user.id))
+    return render_template("manageaccount.html", accounts = db.session.query(User.id, User.username, User.name, (sa.func.coalesce(sa.func.count(Artikkeli.id), 0)).label('articles')).join(Artikkeli, Artikkeli.account_id == User.id).group_by(User.id).filter_by(account_id = current_user.id))
 
 @app.route("/auth/deleteaccount/<account_id>/", methods=["POST"])
 @login_required
