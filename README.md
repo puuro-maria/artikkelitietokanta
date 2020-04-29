@@ -36,3 +36,15 @@ Sovellus on tehty Helsingin Yliopiston tietojenkäsittelytieteiden tiedekunnan [
     **käyttäjätunnus:** käyttäjä
     
     **salasana:** salasana
+    
+## Kehitysehdotuksia
+
+- Artikkelin voisi pystyä merkkaamaan myös luetusta lukemattomaksi.
+
+- Sovelluksessa voisi olla kattavampi "analytiikkasivu"
+
+    - Sivulla voisi klikata vaikka tiettyä avainsanaa listalta, josta sitten ilmestyisi kaikki artikkelit kyseisellä avainsanalla.
+
+- Käyttöliittymä voisi olla paljonkin kauniimpi ja tila voisi olla paremmin käytössä.
+
+
