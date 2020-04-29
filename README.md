@@ -23,9 +23,8 @@ Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Goog
  
     - salasana: testi
     
-**Huomioitavaa**
-    
-Tällä hetkellä Herokussa ei toimi käyttäjätilien hallinnointi. Tämä johtuu kyseisten näkymien yhteenvetokyselyistä, jotka eivät toimi Herokun käyttämässä PostgreSQL:ssä samalla tavoin kuin sqlite3:ssa. Vika tullaan korjaamaan. 
-    
+- Testikäyttäjän (ei admin) tunnukset:
 
-
+    - käyttäjätunnus: käyttäjä
+    
+    - salasana: salasana
