@@ -1,8 +1,16 @@
 # Käyttäjän ohje Artikkelitietokantaan
 
+## Käyttöliittymä
+
+![alt-text](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kuvat/kayttoliittyma.png)
+
 ## Rekisteröityminen
 
-Rekisteröityminen tapahtuu etusivulla klikkaamalla **Sign up** nappia. Käyttäjältä pyydetään:
+Rekisteröityminen tapahtuu etusivulla klikkaamalla **Sign up** nappia. 
+
+![alt-text](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kuvat/register.png)
+
+Käyttäjältä pyydetään:
 
 - nimimerkki (username)
 
@@ -18,9 +26,15 @@ Kun käyttäjä on syöttänyt tarvittavat kentät, sovellus luo uuden tunnuksen
 
 Sisäänkirjautuminen tapahtuu klikkaamalla yläpalkista **Sign in** nappia. Sovellus pyytää nimimerkin ja salasanan.
 
+![alt-text](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kuvat/login.png)
+
 ## Uuden teoksen lisääminen
 
-Uuden artikkelin/teoksen lisääminen tapahtuu klikkaamalla **Add an article** nappia. Sovellus pyytää käyttäjältä:
+Uuden artikkelin/teoksen lisääminen tapahtuu klikkaamalla **Add an article** nappia. 
+
+![alt-text](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kuvat/addArticle.png)
+
+Sovellus pyytää käyttäjältä:
 
 - artikkelin otsikon (title)
 
@@ -38,7 +52,11 @@ Klikkaamalla **Add an article** nappia sovellus luo uuden artikkelin käyttäjä
 
 ## Teosten tarkastelu
 
-Käyttäjä voi tarkastella omia artikkeleitaan klikkaamalla yläpalkista **List articles** nappia. Tällöin avautuu lista kaikista käyttäjän artikkeleista. Listalla voit:
+Käyttäjä voi tarkastella omia artikkeleitaan klikkaamalla yläpalkista **List articles** nappia. Tällöin avautuu lista kaikista käyttäjän artikkeleista. 
+
+![alt-text](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kuvat/listYourArticles.png)
+
+Listalla voit:
 
 - vaihtaa artikkelin lähdettä (esim. uusi linkki) kirjoittamalla uuden lähteen tekstikenttään ja klikkaamalla **Change source** nappia.
 
@@ -54,6 +72,8 @@ Pääkäyttäjä (admin) voi tarkastella ja muokata koko tietokantaa klikkaamall
 
 ## Teosten hakeminen
 
+![alt-text](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kuvat/search.png)
+
 Teoksia voi hakea tietokannasta:
 
 - teoksen nimellä
@@ -66,14 +86,20 @@ Teoksia voi hakea tietokannasta:
 
 Haku tapahtuu yläpalkissa syöttämällä hakusana *Search*-tekstikenttään ja klikkaamalla **Search**. Kaikki haetulla sanalla löytyvät hakutunnukset avautuvat näkymään.
 
+![alt-text](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kuvat/searchResults.png)
+
 ## Oman tilin hallinnointi
 
-Käyttäjä voi hallita omaa tiliään. Käyttäjä pystyy:
+Käyttäjä voi hallita omaa tiliään. Tämä tapahtuu yläpalkin napista **Manage my account**. 
+
+![alt-text](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kuvat/manageMyAccount.png)
+
+Käyttäjä pystyy:
 
 - muuttamaan salasanan
 
 - poistamaan tilin.
 
-Tämä tapahtuu yläpalkin napista **Manage my account**. Kun käyttäjätili poistetaan, myös kyseisen käyttäjän kaikki artikkelit poistetaan samalla tietokannasta.
+Kun käyttäjätili poistetaan, myös kyseisen käyttäjän kaikki artikkelit poistetaan samalla tietokannasta. Pääkäyttäjä pystyy tekemään yllämainitut toimenpiteet kaikille artikkelitietokannan käyttäjätileille **Manage accounts** -painikkeesta.
 
-Pääkäyttäjä pystyy tekemään yllämainitut toimenpiteet kaikille artikkelitietokannan käyttäjätileille.
+![alt-text](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kuvat/manageAccounts.png)
