@@ -1,3 +1,5 @@
+![alt-text](https://media.giphy.com/media/128MHrlrHNwwU0/giphy.gif)
+
 # Artikkelitietokanta
 
 Pieni artikkeli-/teostietokanta tukemaan tutkielmien (esim. kandi, gradu) tekemistä ja ylläpitämään omaa lukulistaa.
@@ -9,17 +11,17 @@ Tietokanta kertoo myös, mistä lähteestä artikkelin voi löytää (esim. Goog
 
 Sovellus on tehty Helsingin Yliopiston tietojenkäsittelytieteiden tiedekunnan [aineopintojen harjoitustyönä](https://courses.helsinki.fi/fi/tkt20011). 
 
-## Dokumentaatio
+## Dokumentaatio :book:
 
-[Tietokantakaavio ja CREATE TABLE-lauseet](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/tietokantakaavio.md)
+[Tietokantakaavio ja CREATE TABLE-lauseet](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/tietokantakaavio.md) :bookmark_tabs:
 
-[Käyttötapaukset](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kayttotapaukset.md)
+[Käyttötapaukset](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kayttotapaukset.md) :woman:
 
-[Käyttäjän ohjeet](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kayttajan_ohje.md)
+[Käyttäjän ohjeet](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/kayttajan_ohje.md) :eyeglasses:
 
-[Asennusohje](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/installation_guide.md)
+[Asennusohje](https://github.com/puuro-maria/artikkelitietokanta/blob/master/documentation/installation_guide.md) :hammer_and_wrench:
 
-## Sovellus pilvessä
+## Sovellus pilvessä :cloud:
 
 [Sovellus Herokussa](https://artikkelitietokanta.herokuapp.com/)
 
